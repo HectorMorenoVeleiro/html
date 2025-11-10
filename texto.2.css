@@ -1,0 +1,19 @@
+/*estilos apra texto 2*/
+div{
+
+	width:80%;
+	background-color: lightcoral;
+	margin: auto;
+	font-family: Verdana;
+	border: 1px solid rebeccapurple;
+	padding: 5px;
+
+}
+
+#cap{
+
+	font-family: Arial;
+	text-align: center;
+	text-decoration: underline;
+	
+}

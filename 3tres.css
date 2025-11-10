@@ -1,0 +1,27 @@
+/* estos estilos css se aplican a documento tres.html */
+
+h2 {
+	text-align: center;
+	color: darkkhaki;
+}
+
+h4 {
+	text-align: right;
+	background-color: red;
+}
+
+p {
+	color: navy;
+}
+
+/* id nº uno */
+#uno {
+	background-color: lightgrey;
+	text-decoration: underline;
+}
+
+/* id nº dos */
+#dos {
+	text-transform: capitalize;
+	background-color: lightgreen;
+}

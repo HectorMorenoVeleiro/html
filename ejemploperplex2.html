@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portafolio Creativo Increíble</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --acento: #7f53ff;
+      --fondo: #1c1b22;
+      --tarjeta: #2a2940;
+      --texto: #f8f9fa;
+      --sombra: rgba(127,83,255,0.25);
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(-45deg, #7f53ff, #647dee, #5ffbf1, #f3d6e3);
+      background-size: 400% 400%;
+      animation: grad-bg 10s ease infinite;
+      color: var(--texto);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    @keyframes grad-bg {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header {
+      padding: 50px 0 30px 0;
+      text-align: center;
+      background: rgba(34,34,59,0.25);
+      box-shadow: 0 6px 36px var(--sombra);
+      border-radius: 0 0 23px 23px;
+    }
+    header h1 {
+      font-size: 3.2em;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      color: #fff;
+      text-shadow: 0 4px 16px #7f53ff88;
+    }
+    header p {
+      font-size: 1.3em;
+      color: #efe7ff;
+      margin-top: 0;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 400;
+      padding: 8px 24px;
+      border-radius: 15px;
+      margin: 0 7px;
+      letter-spacing: .3px;
+      background: linear-gradient(90deg,#7f53ff,#5ffbf1);
+      transition: box-shadow .25s;
+      box-shadow: 0 2px 15px var(--sombra);
+    }
+    nav a:hover {
+      box-shadow: 0 6px 25px var(--sombra);
+    }
+    main {
+      max-width: 1200px;
+      margin: 50px auto 0 auto;
+      padding: 0 30px;
+    }
+    .grid {
+      display: grid;
+      grid-gap: 40px;
+      grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+      margin: 40px 0 0 0;
+    }
+    .tarjeta {
+      background: var(--tarjeta);
+      border-radius: 23px;
+      min-height: 320px;
+      padding: 35px 24px;
+      box-shadow: 0 8px 28px var(--sombra);
+      position: relative;
+      transition: transform .2s, box-shadow .2s;
+      overflow: hidden;
+    }
+    .tarjeta:hover {
+      transform: scale(1.045) rotate(-1.5deg);
+      box-shadow: 0 16px 38px var(--sombra);
+    }
+    .tarjeta h2 {
+      margin-top: 8px;
+      color: #5ffbf1;
+      font-size: 2em;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .tarjeta p {
+      font-size: 1.1em;
+      color: #d1d6e0;
+      margin: 19px 0 5px 0;
+    }
+    .tarjeta .img {
+      width: 56px; height: 56px;
+      background: linear-gradient(120deg,#7f53ff 80%,#5ffbf1);
+      border-radius: 50%;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 11px #5ffbf188;
+      font-size: 2em;
+      color: #fff;
+      animation: giro 2s infinite linear;
+    }
+    @keyframes giro {
+      to { transform: rotate(360deg); }
+    }
+    .cta {
+      display: block;
+      width: 230px;
+      margin: 40px auto 0 auto;
+      padding: 16px 0;
+      text-align: center;
+      font-size: 1.28em;
+      background: linear-gradient(90deg,#7f53ff,#5ffbf1);
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      box-shadow: 0 0 16px var(--sombra),0 2px 11px #ddd;
+      cursor: pointer;
+      transition: background 0.25s;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1.3px;
+    }
+    .cta:hover {
+      background: linear-gradient(90deg,#5ffbf1,#7f53ff);
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      margin: 70px 0 0 0;
+      padding: 40px;
+      color: #fff;
+      font-size: 1.12em;
+      background: rgba(34,34,59,0.23);
+      border-radius: 23px 23px 0 0;
+      box-shadow: 0 -2px 24px var(--sombra);
+    }
+    @media (max-width: 900px) {
+      main { padding: 0 10px; }
+      header { padding: 30px 0 18px 0;}
+      .grid { grid-template-columns: 1fr; grid-gap: 30px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portafolio Creativo</h1>
+    <p>Bienvenido a una experiencia visual fuera de lo común. Descubre proyectos, habilidades y diseño.</p>
+    <nav>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section id="proyectos">
+      <h2 style="text-align:center;color:#7f53ff;font-size:2.1em;margin-bottom:18px;">Proyectos Destacados</h2>
+      <div class="grid">
+        <div class="tarjeta">
+          <div class="img">🌐</div>
+          <h2>Web Interactiva</h2>
+          <p>Aplicación responsive con animaciones, integración API y efectos visuales avanzados.</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img">🧠</div>
+          <h2>AI Chatbot</h2>
+          <p>Chat inteligente con UI personalizada, efectos 'neumorfismo' y soporte multilingüe.</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img">🎨</div>
+          <h2>Diseño UX/UI</h2>
+          <p>Prototipos funcionales hechos en Figma y Adobe XD, demostrando creatividad y técnica.</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img">💡</div>
+          <h2>Enfoque Innovador</h2>
+          <p>Soluciones únicas para marcas, con marketing digital y posicionamiento web.</p>
+        </div>
+      </div>
+      <a class="cta" href="#contacto">¿Quieres trabajar juntos?</a>
+    </section>
+    <section id="sobre" style="margin-top:80px;">
+      <h2 style="text-align:center;color:#5ffbf1;font-size:2.1em;margin-bottom:18px;">Sobre mí</h2>
+      <div class="grid">
+        <div class="tarjeta">
+          <div class="img">👨‍💻</div>
+          <h2>Desarrollador Full Stack</h2>
+          <p>Experto en Java, Python, HTML, CSS y automatización de procesos web.</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img">📚</div>
+          <h2>Educación</h2>
+          <p>Ingeniería en Computación, especializado en programación de interfaces modernas.</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img">🏆</div>
+          <h2>Premios y Reconocimientos</h2>
+          <p>Hackathons, certificaciones y ponencias en eventos de tecnología.</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img">🤝</div>
+          <h2>Colaboraciones</h2>
+          <p>Proyectos open-source, mentoría y networking profesional constante.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contacto" style="margin-top:80px;">
+      <h2 style="text-align:center;color:#7f53ff;font-size:2em;margin-bottom:18px;">Contacto</h2>
+      <div style="max-width:480px;margin:0 auto;background:var(--tarjeta);padding:36px;border-radius:17px;box-shadow:0 6px 24px var(--sombra);">
+        <p style="font-size:1.09em;color:#f3d6e3;">¿Te gustaría colaborar, contratar o saber más? ¡Escríbeme!</p>
+        <form>
+          <input type="text" placeholder="Tu nombre" required style="padding:14px;width:100%;margin-bottom:15px;border:none;border-radius:9px;font-size:1em;">
+          <input type="email" placeholder="Correo electrónico" required style="padding:14px;width:100%;margin-bottom:15px;border:none;border-radius:9px;font-size:1em;">
+          <textarea placeholder="Mensaje" required style="padding:14px;width:100%;margin-bottom:15px;border:none;border-radius:9px;font-size:1em;"></textarea>
+          <button type="submit" class="cta" style="width:100%;">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    © 2025 Portafolio Creativo | Código y diseño por mí
+  </footer>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experto HTML & CSS - Página con Pestañas Avanzadas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-primario: #345beb;
+      --color-secundario: #ff6f91;
+      --color-fondo: #f8f9fa;
+      --color-texto: #222222;
+      --color-pestaña-activada: #345beb;
+      --color-pestaña-inactiva: #aaa;
+      --color-fondo-pestaña: #f0f4ff;
+      --tiempo-trans: 0.35s;
+      --sombra: rgba(52,91,235, 0.3);
+      --borde-radio: 10px;
+      --font-family: 'Inter', sans-serif;
+    }
+
+    /* Reset y base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background: var(--color-fondo);
+      color: var(--color-texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-weight: 700;
+      color: var(--color-primario);
+      margin-bottom: 40px;
+      font-size: 2.4rem;
+      letter-spacing: 1.1px;
+      user-select: none;
+    }
+
+    /* Contenedor general */
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      border-radius: var(--borde-radio);
+      box-shadow: 0 10px 30px var(--sombra);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tabs header */
+    .tabs-nav {
+      display: flex;
+      background: var(--color-fondo-pestaña);
+      border-bottom: 2px solid var(--color-pestaña-activada);
+      user-select: none;
+    }
+    .tabs-nav button {
+      flex-grow: 1;
+      border: none;
+      background: none;
+      padding: 18px 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-pestaña-inactiva);
+      cursor: pointer;
+      transition: color var(--tiempo-trans), box-shadow var(--tiempo-trans);
+      border-bottom: 4px solid transparent;
+      outline-offset: 4px;
+    }
+    .tabs-nav button[aria-selected="true"] {
+      color: var(--color-pestaña-activada);
+      border-bottom-color: var(--color-pestaña-activada);
+      box-shadow: 0 3px 8px var(--sombra);
+      cursor: default;
+      pointer-events: none;
+    }
+    .tabs-nav button:focus-visible {
+      outline: 2px solid var(--color-secundario);
+      outline-offset: 2px;
+    }
+
+    /* Contenido */
+    .tab-content {
+      padding: 28px 40px 40px 40px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--color-texto);
+      animation: fadeInContent var(--tiempo-trans) ease forwards;
+      min-height: 290px;
+    }
+
+    @keyframes fadeInContent {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Tablas y lists dentro contenido */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    table thead {
+      background: var(--color-fondo-pestaña);
+    }
+    table th, table td {
+      padding: 12px 18px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    table th {
+      font-weight: 700;
+      color: var(--color-primario);
+    }
+    ul {
+      padding-left: 1.2em;
+      margin: 0 0 1.2em 0;
+    }
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Formulario */
+    form {
+      display: grid;
+      gap: 18px;
+      margin-top: 12px;
+    }
+    input, textarea {
+      font-family: var(--font-family);
+      font-size: 1rem;
+      padding: 12px 18px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--color-primario);
+      outline: none;
+      box-shadow: 0 0 10px var(--color-pestaña-activada);
+    }
+    button.submit-btn {
+      background: var(--color-primario);
+      color: var(--color-texto-light, #fff);
+      font-weight: 700;
+      padding: 14px 0;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button.submit-btn:hover {
+      background: var(--color-secundario);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .tabs-nav button {
+        font-size: 1rem;
+        padding: 14px 8px;
+      }
+      .tab-content {
+        padding: 24px 20px 30px 20px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Portafolio Experto con Pestañas Avanzadas</h1>
+  <div class="container" role="tablist" aria-label="Pestañas de contenido">
+
+    <div class="tabs-nav" role="tablist" aria-orientation="horizontal">
+      <button role="tab" aria-selected="true" aria-controls="intro" id="tab-intro" tabindex="0">Introducción</button>
+      <button role="tab" aria-selected="false" aria-controls="proyectos" id="tab-proyectos" tabindex="-1">Proyectos</button>
+      <button role="tab" aria-selected="false" aria-controls="habilidades" id="tab-habilidades" tabindex="-1">Habilidades</button>
+      <button role="tab" aria-selected="false" aria-controls="contacto" id="tab-contacto" tabindex="-1">Contacto</button>
+    </div>
+
+    <section id="intro" role="tabpanel" tabindex="0" aria-labelledby="tab-intro" class="tab-content">
+      <h2>Bienvenido a mi portafolio profesional</h2>
+      <p>Esta página es producto de años de estudio y perfeccionamiento en HTML y CSS, reflejando habilidades expertas y atención al detalle con interfaces limpias, accesibles y elegantes.</p>
+      <p>En este sitio podrás navegar diferentes áreas, desde la presentación hasta mis proyectos y formas de contacto. La estructura dinámica con pestañas permite mantener todo organizado y fácil de explorar.</p>
+      <h3>Motivaciones</h3>
+      <ul>
+        <li>Crear diseños minimalistas y funcionales</li>
+        <li>Implementar accesibilidad total y experiencia de usuario</li>
+        <li>Dominar técnicas avanzadas de CSS Grid, Flexbox y animaciones</li>
+        <li>Mejorar constantemente con feedback y documentación</li>
+      </ul>
+    </section>
+
+    <section id="proyectos" role="tabpanel" tabindex="-1" aria-labelledby="tab-proyectos" class="tab-content" hidden>
+      <h2>Proyectos destacados</h2>
+      <table>
+        <thead>
+          <tr><th>Nombre</th><th>Tecnologías</th><th>Descripción</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Landing Page Empresarial</td>
+            <td>HTML5, CSS3, JavaScript</td>
+            <td>Página responsiva y SEO optimizada, con animaciones dinámicas.</td>
+          </tr>
+          <tr>
+            <td>Aplicación de Tareas</td>
+            <td>React, CSS Modules</td>
+            <td>Gestor de tareas con UI limpia y control por teclado completo.</td>
+          </tr>
+          <tr>
+            <td>Web Portfolio Personal</td>
+            <td>HTML, SCSS, Flexbox, Grid</td>
+            <td>Diseño moderno con sistema de pestañas y formularios con validación.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="habilidades" role="tabpanel" tabindex="-1" aria-labelledby="tab-habilidades" class="tab-content" hidden>
+      <h2>Habilidades técnicas</h2>
+      <ul>
+        <li><strong>HTML5:</strong> Semántica avanzada, accesibilidad, formularios customizados.</li>
+        <li><strong>CSS3:</strong> Flexbox, Grid, animaciones, variables, responsive design.</li>
+        <li><strong>JavaScript:</strong> Manipulación DOM, eventos, fetch API, ES6+</li>
+        <li><strong>Herramientas:</strong> VS Code, Git, Chrome DevTools, Figma para prototipado.</li>
+      </ul>
+      <p>Me gusta escribir código limpio, mantenible y con documentación clara.</p>
+    </section>
+
+    <section id="contacto" role="tabpanel" tabindex="-1" aria-labelledby="tab-contacto" class="tab-content" hidden>
+      <h2>Contáctame</h2>
+      <p>¿Quieres trabajar conmigo o hacer alguna consulta? Utiliza el siguiente formulario:</p>
+      <form id="form-contacto-avanzado" novalidate>
+        <input type="text" name="nombre" placeholder="Nombre completo" required aria-required="true" />
+        <input type="email" name="email" placeholder="Correo electrónico" required aria-required="true" />
+        <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required aria-required="true"></textarea>
+        <button type="submit" class="submit-btn">Enviar mensaje</button>
+        <p id="msg-error" style="color:#d9534f; font-weight:bold; display:none; margin-top: 12px;"></p>
+        <p id="msg-exito" style="color:#5cb85c; font-weight:bold; display:none; margin-top: 12px;"></p>
+      </form>
+    </section>
+
+  </div>
+
+  <script>
+    // Manejo de pestañas accesible
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const tabList = document.querySelector('[role="tablist"]');
+
+    tabList.addEventListener('keydown', (e) => {
+      const keyLeft = 37;
+      const keyRight = 39;
+      let newIndex;
+
+      const currentIndex = Array.from(tabs).findIndex(tab => tab.getAttribute('aria-selected') === 'true');
+
+      if(e.keyCode === keyRight) {
+        newIndex = (currentIndex + 1) % tabs.length;
+        tabs[newIndex].focus();
+        e.preventDefault();
+      } else if(e.keyCode === keyLeft) {
+        newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+        tabs[newIndex].focus();
+        e.preventDefault();
+      }
+    });
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        activateTab(e.currentTarget);
+      });
+      tab.addEventListener('keydown', (e) => {
+        if (e.key === "Enter" || e.key === " "){
+          activateTab(e.currentTarget);
+          e.preventDefault();
+        }
+      });
+    });
+
+    function activateTab(tab) {
+      // Desactivar todas pestañas
+      tabs.forEach(t => {
+        t.setAttribute('aria-selected', 'false');
+        t.setAttribute('tabindex', '-1');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = true;
+      });
+      // Activar la pestaña seleccionada
+      tab.setAttribute('aria-selected', 'true');
+      tab.setAttribute('tabindex', '0');
+      const panel = document.getElementById(tab.getAttribute('aria-controls'));
+      panel.hidden = false;
+      panel.focus();
+    }
+
+    // Activar la primera pestaña por defecto
+    activateTab(tabs[0]);
+
+    // Validación y envío del formulario simulado
+    const formulario = document.getElementById('form-contacto-avanzado');
+    const msgError = document.getElementById('msg-error');
+    const msgExito = document.getElementById('msg-exito');
+
+    formulario.addEventListener('submit', e => {
+      e.preventDefault();
+      msgError.style.display = 'none';
+      msgExito.style.display = 'none';
+
+      const nombre = formulario.nombre.value.trim();
+      const email = formulario.email.value.trim();
+      const mensaje = formulario.mensaje.value.trim();
+
+      if (!nombre || !email || !mensaje) {
+        msgError.textContent = 'Por favor, completa todos los campos.';
+        msgError.style.display = 'block';
+        return;
+      }
+
+      const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!emailValid) {
+        msgError.textContent = 'Correo electrónico no válido.';
+        msgError.style.display = 'block';
+        return;
+      }
+
+      // Simular éxito envío
+      msgExito.textContent = `Gracias, ${nombre}. Tu mensaje ha sido enviado correctamente.`;
+      msgExito.style.display = 'block';
+      formulario.reset();
+    });
+  </script>
+</body>
+</html>

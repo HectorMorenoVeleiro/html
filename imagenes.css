@@ -1,0 +1,36 @@
+div {
+    width: 60%;
+    background-color: aquamarine;
+    margin: auto;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    width: 80%;
+    background-color: powderblue;
+}
+
+td,
+th {
+    border: 3px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+/* a partir de aqui estilos de imagen y video */
+
+/*
+    img{
+	    width:30%;
+	    height:auto;
+}*/
