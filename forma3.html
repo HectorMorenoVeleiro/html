@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="maneja_formulario.css" />
+    <script>
+      function comprobar() {
+        var pass1 = document.getElementById("con").value;
+        var pass2 = document.getElementById("rep").value;
+        if (pass1 === pass2) alert("!Las dos contraseñas son iguales¡");
+        else alert("Las dos contraseñas son distintas");
+      }
+    </script>
   </head>
   <body>
     <div>
