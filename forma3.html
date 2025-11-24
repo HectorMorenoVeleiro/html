@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="maneja_formulario.css" />
+  </head>
+  <body>
+    <div>
+      <form>
+        <h2>Ejercicio de ejemplo de fieldsets y legends</h2>
+        <form action="maneja_formulario.php" method="post"></form>
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="nom">Nombre</label>
+          <input id="nom" type="text" name="nombre" value=" " />
+          <label for="ape">Apellidos</label>
+          <label for="dni">DNI</label>
+          <input
+            id="dni"
+            type="text"
+            name="dni"
+            value=" "
+            size="10"
+            maxlength="9"
+          />
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Datos de conexion</legend>
+          <label for="usu">Nombre de usuario</label>
+          <input id="usu" type="text" name="nombre" value="" maxlength="10" />
+          <label for="con">Contraseña</label>
+          <input
+            id="con"
+            type="password"
+            name="password"
+            value=""
+            maxlength="10"
+          />
+          <label for="rep">Repite la contraseña</label>
+          <input
+            id="rep"
+            type="password"
+            name="password2"
+            value=""
+            maxlength="10"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
