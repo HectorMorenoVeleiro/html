@@ -1,0 +1,118 @@
+div {
+    width: 60%;
+    background-color: orange;
+    margin: auto;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo general para el formulario */
+form {
+    max-width: 400px;
+    /* Ancho máximo del formulario */
+    margin: 20px auto;
+    /* Centrar el formulario en la página */
+    padding: 20px;
+    /* Espaciado interno */
+    border: 1px solid #ccc;
+    /* Borde del formulario */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    background-color: #f9f9f9;
+    /* Color de fondo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Estilo para los labels */
+label {
+    display: block;
+    /* Hacer que el label ocupe toda la línea */
+    margin-bottom: 5px;
+    /* Espacio entre el label y el input */
+    font-weight: bold;
+    /* Hacer el texto del label más destacado */
+    color: #333;
+    /* Color del texto del label */
+}
+
+label.sin {
+    display: inline;
+    /* Hacer que el label ocupe toda la línea */
+
+}
+
+/* Estilo para los inputs */
+input[],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    /* Ancho completo */
+    padding: 10px;
+    /* Espaciado interno */
+    margin-bottom: 10px;
+    /* Espacio entre inputs */
+    border: 2px solid #ccc;
+    /* Borde del input */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    box-sizing: border-box;
+    /* Incluir padding y borde en el ancho total */
+    transition: border-color 0.3s ease;
+    /* Transición suave para el borde */
+}
+
+/* Estilo para inputs al recibir foco */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #66afe9;
+    /* Cambio de color del borde al enfocar */
+    outline: none;
+    /* Eliminar el contorno predeterminado del navegador */
+}
+
+/* Estilo para inputs deshabilitados */
+input[disabled],
+textarea[disabled] {
+    background-color: #eee;
+    /* Color de fondo para inputs deshabilitados */
+    cursor: not-allowed;
+    /* Cambiar el cursor al pasar sobre un input deshabilitado */
+}
+
+/* Estilo para el botón de envío (submit) */
+input[type="submit"],
+[type="reset"] {
+    background-color: #5cb85c;
+    /* Color de fondo verde */
+    color: white;
+    /* Color del texto en blanco */
+    padding: 10px 15px;
+    /* Espaciado interno del botón */
+    margin: 10px 0px;
+    border: none;
+    /* Sin borde predeterminado */
+    border-radius: 4px;
+    /* Bordes redondeados en el botón */
+    cursor: pointer;
+    /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el fondo del botón */
+}
+
+/* Efecto hover en el botón de envío */
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+    /* Oscurecer el color de fondo al pasar el ratón por encima */
+}
+
+/*estilos para css de select gracias a @milagros*/
