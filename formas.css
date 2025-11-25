@@ -49,7 +49,7 @@ label.sin {
 }
 
 /* Estilo para los inputs */
-input[],
+input[null],
 input[type="email"],
 input[type="password"],
 textarea {
