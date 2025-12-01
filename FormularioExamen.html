@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    sss ul#disco {
+      list-style-type: disc;
+    }
+  </style>
+
+  <body>
+    <div>
+      <form>
+        <h1>My feedback form</h1>
+        <ul>
+          <ul id="disco">
+            <li>
+              <label for="nom">Name</label>
+              <input id="nom" type="text" name="nombre" value=" " />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input id="email" type="text" name="email" value=" " />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input id="email" type="text" name="email" value=" " />
+            </li>
+            <li>
+              <a>Please check all the emotions that apply to you:</a>
+              <ul id="disco">
+                <li>
+                  <label for="Angry">Angry</label>
+                  <input id="Angry" type="checkbox" name="Angry" value=" " />
+                </li>
+                <li>
+                  <label for="Sad">Sad</label>
+                  <input id="Sad" type="checkbox" name="Sad" value=" " />
+                </li>
+                <li>
+                  <label for="Happy">Happy</label>
+                  <input id="Happy" type="checkbox" name="Happy" value=" " />
+                </li>
+                <li>
+                  <label for="Ambivalent">Ambivalent</label>
+                  <input
+                    id="Ambivalent"
+                    type="checkbox"
+                    name="Ambivalent"
+                    value=" "
+                  />
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a>How satisfied were you with our service?</a>
+              <ul id="disco">
+                <li>
+                  <label for="Very Satisfied">Very Satisfied</label>
+                  <input
+                    id="Very Satisfied"
+                    type="radio"
+                    name="opciones"
+                    value="A"
+                  />
+                </li>
+                <li>
+                  <label for="Satisfied">Satisfied</label>
+                  <input
+                    id="Satisfied"
+                    type="radio"
+                    name="opciones"
+                    value="B"
+                  />
+                </li>
+                <li>
+                  <label for="Didn't care">Didn't care</label>
+                  <input
+                    id="Didn't care"
+                    type="radio"
+                    name="opciones"
+                    value="C"
+                  />
+                </li>
+                <li>
+                  <label for="Dissatisfied">Dissatisfied</label>
+                  <input
+                    id="Dissatisfied"
+                    type="radio"
+                    name="opciones"
+                    value="D"
+                  />
+                </li>
+              </ul>
+            </li>
+            <li>
+              <label id="descripcion">Further comments:</label
+              ><textarea
+                title="descripcion"
+                name="descripcion"
+                cols="20"
+                rows="2"
+              ></textarea>
+            </li>
+            <li>
+              <label id="photo">Bio photo</label>
+              <input title="photo" type="text" name="photo" value="" />
+              <input title="photo" type="file" name="photo" value="" />
+            </li>
+            <li>
+              <label id="Location">Location visited</label>
+              <select title="ubicacion" name="ubicacion">
+                <option value="">Select location</option>
+                <option value="madrid">tanto no pide el ejercicio</option>
+                <option value="madrid">no te flipes</option>
+              </select>
+            </li>
+          </ul>
+          <li>
+            <input type="submit" value="submit" />
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </body>
+</html>
