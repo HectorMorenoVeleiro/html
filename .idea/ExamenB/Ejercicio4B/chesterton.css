@@ -1,0 +1,32 @@
+body {
+    margin: 10%;
+    background-color: rgb(150, 100, 78);
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+div {
+    text-align: center;
+}
+
+h1 {
+    margin: 10%;
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    line-height: 25px;
+}
+
+a {
+    border: 20px;
+    border-radius: 6px;
+    margin: 30px;
+    padding: 6px;
+    background-color: rgb(150, 100, 78);
+    color: rgb(255, 255, 255);
+    text-decoration: overline;
+}
