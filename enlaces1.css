@@ -1,0 +1,25 @@
+/* --enlaces_1-- */
+table,
+tr,
+td {
+    border: 1px solid;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+a:hover {
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: red;
+}
+
+a:visited {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: purple;
+    background-color: yellow;
+}
