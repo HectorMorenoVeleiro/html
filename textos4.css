@@ -1,0 +1,37 @@
+h2 {
+    color: #2c3e50;
+    font-family: sans-serif;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    background-color: #e8f4fd;
+}
+
+p {
+    color: #34495e;
+    font-family: sans-serif;
+    line-height: 1.6;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    text-indent: 30px;
+}
+
+#izq {
+    text-align: left;
+    text-decoration: overline;
+}
+
+#cen {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#der {
+    text-align: right;
+    text-decoration: line-through;
+}
+
+/* ejemplo de backgroudn a secas como shortcut
+background : #FFCC66 url("butterfly.gif") no-repeat fixed right bottom;
+*/
