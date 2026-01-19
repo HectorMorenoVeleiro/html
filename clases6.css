@@ -17,6 +17,24 @@ p {
     background-color: #f9f9f9;
 }
 
+p#izq {
+    text-align: left;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+p#cen {
+    text-align: center;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+p#der {
+    text-align: right;
+    text-decoration: overLine;
+    text-transform: lowercase;
+}
+
 /*estilos para blanco y tinto*/
 a {
     color: blue;
@@ -31,3 +49,5 @@ a.blanco {
 a.tinto {
     color: #800000;
 }
+
+/*--estilos para identificadores UNICOS--*/
