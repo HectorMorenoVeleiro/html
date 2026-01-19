@@ -24,9 +24,10 @@ a {
 
 /*para los enlaces blancos creo una clase*/
 a.blanco {
-    color: lightblue;
+    color: #FFBB00;
 }
 
+/*para los enlaces tintos creo otra clase*/
 a.tinto {
-    color: darkred;
+    color: #800000;
 }
