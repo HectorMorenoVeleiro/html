@@ -1,12 +1,11 @@
 /* -- usar como css para el archivo .html ejemplo8 -- */
 
-*estilos para h2 y p*/ h2 {
+h2 {
     color: #2c3e50;
     font-family: sans-serif;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-    margin-top: 20px;
     background-color: #e8f4fd;
+    margin: 10px 255px 8px 30px;
+    border: 2px solid #3498db;
 }
 
 p {
@@ -14,41 +13,8 @@ p {
     font-family: sans-serif;
     line-height: 1.6;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin: 3px 30px;
+    padding-left: 70px;
+    border: 2px solid #3498db;
     background-color: #f9f9f9;
 }
-
-p#izq {
-    text-align: left;
-    text-decoration: underline;
-    text-transform: capitalize;
-}
-
-p#cen {
-    text-align: center;
-    text-decoration: overline;
-    text-transform: uppercase;
-}
-
-p#der {
-    text-align: right;
-    text-decoration: overLine;
-    text-transform: lowercase;
-}
-
-/*estilos para blanco y tinto*/
-a {
-    color: blue;
-}
-
-/*para los enlaces blancos creo una clase*/
-a.blanco {
-    color: #FFBB00;
-}
-
-/*para los enlaces tintos creo otra clase*/
-a.tinto {
-    color: #800000;
-}
-
-/*--estilos para identificadores UNICOS--*/
