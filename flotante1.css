@@ -1,0 +1,12 @@
+div {
+    width: 80%;
+    margin: auto;
+    border: 2px solid rebeccapurple;
+    background-color: rgb(219, 255, 243);
+}
+
+img {
+    float: right;
+    margin: 15px;
+    width: 50%;
+}
