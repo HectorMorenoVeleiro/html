@@ -1,3 +1,9 @@
+/* Estilos para cajas ejercicio 4A para examen */
+
+div {
+    position: relative;
+}
+
 #box1 {
     left: 10%;
     width: 70%;
@@ -7,8 +13,8 @@
 
 #box2 {
     left: 10%;
-    width: 70%;
-    top: 15%;
+    width: 20%;
+    top: 30%;
     height: 10%;
 }
 
