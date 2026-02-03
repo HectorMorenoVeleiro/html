@@ -29,7 +29,13 @@ div {
     border-radius: 10px;
 }
 
-.estrechas {}
+.estrechas {
+    position: relative;
+    border: 3px dotted red;
+    width: 20%;
+    margin: 30px 10%;
+    left: 10%;
+}
 
 #box1 {
     left: 10%;
