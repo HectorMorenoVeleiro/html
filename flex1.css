@@ -1,0 +1,13 @@
+/*estilos para el contenedor o wrapper*/
+
+div {
+    display: flex;
+    margin-bottom: 5px;
+    background-color: aquamarine;
+}
+
+p {
+    width: 100px;
+    border: black 1px solid;
+    margin: 2px;
+}
