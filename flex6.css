@@ -1,0 +1,12 @@
+/*estilos flex css*/
+
+div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+p {
+    width: 100px;
+    border: 1px solid black;
+    margin: 2px;
+}
