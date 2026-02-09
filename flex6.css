@@ -2,7 +2,7 @@
 
 div {
     display: flex;
-    flex-wrap: nowrap;
+    flex-flow: row-reverse wrap;
 }
 
 p {
