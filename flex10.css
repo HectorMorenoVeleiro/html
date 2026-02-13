@@ -5,8 +5,11 @@ div {
 }
 
 p {
-    flex-basis: 120px;
-    border: 2px solid red;
-    margin: 10px;
-    padding: 5px;
+    flex-grow: 1;
+    border: black 2px solid;
+    margin: 2px;
+}
+
+p.mayor {
+    flex-grow: 2;
 }
