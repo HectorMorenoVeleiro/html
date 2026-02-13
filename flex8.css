@@ -7,7 +7,7 @@ div {
 p {
     width: 100px;
     border: black 1px solid;
-    margin: 2px;
+    margin: 10px;
 }
 
 p.primero {
