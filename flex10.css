@@ -7,9 +7,11 @@ div {
 p {
     flex-grow: 1;
     border: black 2px solid;
-    margin: 2px;
+    margin: 10px;
+    padding: 5px;
 }
 
+/* doble de ancho en el reparto */
 p.mayor {
     flex-grow: 2;
 }
