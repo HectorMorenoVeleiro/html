@@ -1,0 +1,15 @@
+/* estilos para flex 8 ejemlpo css */
+
+div {
+    display: flex;
+}
+
+p {
+    width: 100px;
+    border: black 1 xp solid;
+    margin: 2px;
+}
+
+p.primero {
+    order: -1;
+}
