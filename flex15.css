@@ -1,3 +1,5 @@
+/* estilos css para flex con align items vertial*/
+
 div {
     display: flex;
     align-items: baseline;
