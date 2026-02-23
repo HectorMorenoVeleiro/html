@@ -1,0 +1,15 @@
+/* estilos css para flex con align items vertial*/
+
+div {
+    display: flex;
+    height: 10em;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: #eee;
+}
+
+p {
+    width: 200px;
+    border: black 1 px solid;
+    margin: 8px;
+}
