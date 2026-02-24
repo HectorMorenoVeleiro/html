@@ -1,14 +1,14 @@
 div {
-    display: flex;
+  display: flex;
 }
 
 p {
-    flex-shrink: 1;
-    margin: 10px;
-    border: 2px solid red;
-    padding: 5px;
+  flex-shrink: 1;
+  margin: 10px;
+  border: 2px solid red;
+  padding: 5px;
 }
 
 p.menor {
-    flex-shrink: 2;
+  flex-shrink: 2;
 }
