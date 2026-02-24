@@ -1,0 +1,22 @@
+/* css para trabajar*/
+/* Propiedades comunes  */
+
+html {
+  hyphens: auto;
+}
+
+article {
+  display: flex;
+  align-content: flex-end;
+  margin: 10px;
+}
+
+p {
+  border: black 2px solid;
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 15px;
+  text-align: center;
+  text-align: justify;
+}
