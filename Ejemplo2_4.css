@@ -16,13 +16,13 @@ article {
 
 article div {
     border: 1px solid black;
-    width: 350px;
-    display: flex;
+    width: 370px;
+    display: flexbox;
     flex-direction: row;
 }
 
 article {
-    display: flex;
+    display: flexbox;
     font-size: 1.5rem;
     padding: 10px;
 }
