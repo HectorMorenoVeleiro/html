@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+    <!-- declaración de elementos finales -->
+    <xsd:element name="nombre" type="xsd:string"/>
+    <xsd:element name="apellido" type="xsd:string"/>
+    <xsd:element name="edad" type="xsd:integer"/>
+    <xsd:element name="cargo" type="xsd:string"/>
+    <xsd:element name="departamento" type="xsd:string"/>
+
+    <xsd:element name="empleado">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="nombre"/>
+                <xsd:element ref="apellido"/>
+                <xsd:element ref="edad"/>
+                <xsd:element ref="cargo"/>
+                <xsd:element ref="departamento"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="empleados">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="empleado"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

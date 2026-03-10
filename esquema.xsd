@@ -22,4 +22,14 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <!-- declaracion de elementos finales -->
+    <xs:element name="TITLE" type="xs:string"/>
+    <xs:element name="ARTIST" type="xs:string"/>
+    <!-- se podia haber declarado el COUNTRY como un ENUMERADO -->
+    <xs:element name="COUNTRY" type="xs:string"/>
+    <!-- se podia haber declarado el COMPANY como un ENUMERADO-->
+    <xs:element name="COMPANY" type="xs:string"/>
+    <xs:element name="PRICE" type="xs:decimal"/>
+    <xs:element name="YEAR" type="xs:integer"/>
 </xs:schema>
